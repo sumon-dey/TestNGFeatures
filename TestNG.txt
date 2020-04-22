@@ -1,0 +1,10 @@
+TestNG (Test Next Generation) is Java Unit Testing Framework
+
+Advantages of TestNG
+1) Design test cases in a systematic way
+2) Different Annotations
+3) Priorities/Sequences
+4) Grouping
+5) Dependency
+6) Data Provider
+7) Open-source and Free
