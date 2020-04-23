@@ -6,17 +6,17 @@ public class TestNGPriorityAndGroups {
 
 	@Test(priority = 3, groups = "Regression")
 	public void myTest1() {
-		System.out.println("Inside myTest1() method");
+		System.out.println("This is Regression Test1");
 	}
 
 	@Test(priority = 1, groups = "Regression")
 	public void myTest2() {
-		System.out.println("Inside myTest2() method");
+		System.out.println("This is Regression Test2");
 	}
 
 	@Test(priority = 2, groups = "Smoke")
 	public void myTest3() {
-		System.out.println("Inside myTest3() method");
+		System.out.println("This is Smoke Test");
 	}
 
 }
