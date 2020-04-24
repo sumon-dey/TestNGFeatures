@@ -12,6 +12,8 @@ import org.testng.annotations.Test;
 
 public class TestNGCommonAnnotations {
 
+	// TestNG tags order -> suite>test>groups>classes>class>methods>method
+
 	// Pre-Condition Annotations -> starting with @Before
 	@BeforeSuite
 	public void setUp() {

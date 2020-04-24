@@ -6,7 +6,12 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class TestNGDataProvider {
-
+	/*
+	 * A test method that uses the "dataProvider" attribute will be executed
+	 * multiple number of times based on the data provided by the DataProvider. It
+	 * will be executed using the same instance of the test class to which the test
+	 * method belongs
+	 */
 	@Test(dataProvider = "getData1")
 	public void showData1(int int1, String str1) {
 		System.out.println("showData1 -> int1 = " + int1 + ", str1 = " + str1);

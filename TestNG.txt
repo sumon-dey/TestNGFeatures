@@ -1,10 +1,94 @@
 TestNG (Test Next Generation) is Java Unit Testing Framework
 
-Advantages of TestNG
-1) Design test cases in a systematic way
-2) Different Annotations
-3) Priorities/Sequences
-4) Grouping
-5) Dependency
-6) Data Provider
-7) Open-source and Free
+Advantages of TestNG:-
+1) Provides parallel execution of test methods
+2) Allows to define dependency of one test method over other test method(s)
+3) Allows to assign priority to test methods
+4) Allows grouping of test methods into test groups
+5) Provides support for parameterizing test cases using @Parameters annotation
+6) Allows data-driven testing using the @DataProvider annotation
+7) Has different assertions that help in checking the expected and actual results
+8) Can produce detailed HTML reports using Listeners
+9) Helps to design unit/integration/functional/acceptance test cases in a systematic way
+10) Provides many useful annotations
+11) Is open-source and free
+
+Importance of testng.xml file:-
+1) Used to configure the complete test suite in a single file. 
+2) Allows to include or exclude the execution of test methods and test groups
+3) Allows to pass parameters to the test cases
+4) Allows to add group dependencies
+5) Allows to add priorities to the test cases
+6) Allows to configure parallel execution of test cases
+7) Allows to parameterize the test cases
+
+Soft Assert:-
+It collects all errors during @Test but does not throw exception when an assert fails and would continue with the next
+step after the assert statement. If there is any exception and you want to throw it, then you need to use 
+softAssert.assertAll() method as a last statement in the @Test and test suite will continue with the next @Test as it is.
+
+Hard Assert:-
+It throws an AssertException immediately when an assert statement fails and test suite continues with the next
+@Test as it is.
+
+Exception test in TestNG:-
+TestNG provides an option for tracing the Exception Handling of code. We can verify whether a code throws the
+expected exception or not. The expected exception to validate while running the test case is mentioned using the 
+"expectedExceptions" attribute value along with @Test annotation.
+
+Grouping of test cases using TestNG:-
+TestNG allows us to perform groupings of test cases. Not only can we declare the methods belonging to groups,
+but also can specify groups that contain other groups(MetaGroups). Then, TestNG can be invoked and asked to include a certain
+set of groups (or regular expressions) while excluding another set. This gives us maximum flexibility in how we 
+partition the tests and it does not require us to recompile anything if we want to run two different sets of tests
+back to back. Groups are specified in the testng.xml file and can be found either under the <test> or <suite> tag.
+Groups specified inside the <suite> tag apply to all the <test> tags present under it. 
+
+Running parallel tests in TestNG:-
+We can use the "parallel" attribute in the testng.xml file to perform parallel test execution. The "parallel" attribute
+of the <suite> tag can accept 4 values: 
+tests -> all the test cases inside <test> tag of testng.xml file will run in parallel
+classes -> all the test cases inside a java class will run in parallel
+methods -> all the method with @Test annotation will execute in parallel
+instances -> all the test cases in the same instance will execute in parallel but two methods of two different instances
+                       will run in different thread
+
+Different ways to produce reports for TestNG
+- Listeners implement the interface org.testng.ITestListener and are notified in real time of when a test starts/passes/fails etc.
+- Reporters implement the interface org.testng.IReporter and are notified when all the suites have been run by TestNG.
+   The IReporter instance receives a list of objects that describe the entire test run.
+
+Use of @Listener annotation in TestNG
+TestNG listeners are used to configure reports and logging. One of the most widely used listeners in TestNG is the
+"ITestListener" interface. It has methods like onTestStart, onTestSuccess, onTestFailure, onTestSkipped etc. We should
+implement this interface creating a listener class of our own. Next, we should add the listeners annotation (@Listener)
+in the class which was created.
+
+Running TestNG from Command Prompt
+java <path to the testng jar file> TestNGDemo1.java
+
+Use of the "threadPoolSize" attribute
+The "threadPoolSize" attribute tells to form a thread pool to run the test method though multiple threads. This
+attribute is ignored if the "invocationCount" attribute is not specified. e.g.
+@Test(threadPoolSize=3, <code class="plain">invocationCount=</code><code class="value">10</code>)
+public void test1(){}
+Here, the method test1() will be invoked from 3 different threads.
+
+Use of the @Factory annotation
+It will execute all the test methods present inside a test class using a separate instance of the respective class with
+different sets of data.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

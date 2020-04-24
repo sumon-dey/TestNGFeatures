@@ -5,6 +5,10 @@ import org.testng.annotations.Test;
 
 public class TestNGAssertions {
 
+	// Assetion methods present in the TestNG Assert class ->
+	// assertEquals, assertNotEquals, assertTrue, assertFalse, assertNull,
+	// assertNotNull, assertSame, assertNotSame, assertThrows, fail
+
 	@Test
 	public void test1() {
 		String a = "Hello ";
