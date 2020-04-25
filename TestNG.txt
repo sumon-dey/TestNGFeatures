@@ -28,8 +28,8 @@ step after the assert statement. If there is any exception and you want to throw
 softAssert.assertAll() method as a last statement in the @Test and test suite will continue with the next @Test as it is.
 
 Hard Assert:-
-It throws an AssertException immediately when an assert statement fails and test suite continues with the next
-@Test as it is.
+It throws an AssertException immediately when an assert statement fails, the other steps in the same test case are skipped
+and the test suite continues execution of the next @Test as it is.
 
 Exception test in TestNG:-
 TestNG provides an option for tracing the Exception Handling of code. We can verify whether a code throws the
