@@ -1,5 +1,10 @@
 package com.testautomation.testng;
 
+import static org.testng.Assert.assertFalse;
+import static org.testng.Assert.assertNotNull;
+import static org.testng.Assert.assertNull;
+import static org.testng.Assert.assertTrue;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -41,9 +46,24 @@ public class TestNGAssertions {
 
 	@Test
 	public void test3() {
-		boolean a = true;
-		// Hard Assert
-		Assert.assertTrue(a);
+		String str = null;
+		assertNull(str);
+	}
+
+	@Test
+	public void test4() {
+		String str = "";
+		assertNotNull(str);
+	}
+
+	@Test
+	public void test5() {
+		assertTrue(true);
+	}
+
+	@Test
+	public void test6() {
+		assertFalse(false);
 	}
 
 	@Test
