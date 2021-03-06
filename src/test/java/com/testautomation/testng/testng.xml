@@ -20,7 +20,9 @@
 			<!-- To exclude a particular group from execution -->
 			<!-- <groups><run> <exclude name="Smoke" /> </run> </groups> -->
 			<run>
-				<include name="all" />
+				<!-- <include name="all" /> -->
+				<include name="Smoke"></include>
+				<include name="Regression"></include>
 			</run>
 		</groups>
 		<classes>
@@ -36,4 +38,12 @@
 			<class name="com.testautomation.testng.TestNGPriorityAndGroups" />
 		</classes>
 	</test>
-</suite> 
+</suite>
+
+<!-- How to run testng.xml file from the command line -->
+<!-- java -cp <path to the project class files>;<path to the libraries/*> 
+	org.testng.TestNG {testng.xml} -->
+<!-- java -cp <path to the project class files>;<path to the libraries/*> 
+	org.testng.TestNG -testclass {className} -->
+<!-- java -cp <path to the project class files>;<path to the libraries/*> 
+	org.testng.TestNG -methods {className.methodName} -->
