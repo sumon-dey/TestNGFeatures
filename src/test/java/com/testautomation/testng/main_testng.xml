@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!-- This is the main testng xml file which can be configured to run other 
+	testng xml files in the project as child xmls -->
+<suite name="MainTestSuite">
+	<suite-files>
+		<suite-file path="testng1.xml" />
+		<suite-file path="testng2.xml" />
+		<suite-file path="testng3.xml" />
+		<suite-file path="testng4.xml" />
+	</suite-files>
+</suite>
+
